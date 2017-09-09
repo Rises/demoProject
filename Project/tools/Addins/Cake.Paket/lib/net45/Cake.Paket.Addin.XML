@@ -1,0 +1,347 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cake.Paket.Addin</name>
+    </assembly>
+    <members>
+        <member name="T:Cake.Paket.Addin.PaketAliases">
+            <summary>
+            <para>Contains functionality for working with <see href="https://fsprojects.github.io/Paket/">paket</see>.</para>
+            <para>
+            In order to use the commands for this addin, you will need to include the following in your
+            build.cake file:
+            <code>
+            #addin paket:?package=Cake.Paket
+            </code>
+            </para>
+            <para>
+            This assumes your using the <see
+            href="https://www.nuget.org/packages/Cake.Paket.Module/">Cake.Paket.Module</see>. If you'd
+            rather use NuGet then include:
+            <code>
+            #addin nuget:?package=Cake.Paket
+            #tool nuget:?package=Paket
+            </code>
+            </para>
+            </summary>
+        </member>
+        <member name="M:Cake.Paket.Addin.PaketAliases.PaketPack(Cake.Core.ICakeContext,Cake.Core.IO.DirectoryPath,Cake.Paket.Addin.Pack.PaketPackSettings)">
+            <summary>
+            Creates NuGet package(s) in the output directory for the given settings.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="output">The output directory.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.PaketAliases.PaketPack(Cake.Core.ICakeContext,Cake.Core.IO.DirectoryPath)">
+            <summary>
+            Creates NuGet package(s) in the output directory.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="output">The output directory.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.PaketAliases.PaketPush(Cake.Core.ICakeContext,Cake.Core.IO.FilePath,Cake.Paket.Addin.Push.PaketPushSettings)">
+            <summary>
+            Pushes NuGet package defined by the file path for the given settings.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="filePath">The NuGet package file path.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.PaketAliases.PaketPush(Cake.Core.ICakeContext,System.Collections.Generic.IEnumerable{Cake.Core.IO.FilePath},Cake.Paket.Addin.Push.PaketPushSettings)">
+            <summary>
+            Pushes NuGet packages defined by the file paths for the given settings.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="filePaths">The NuGet packages file path.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.PaketAliases.PaketRestore(Cake.Core.ICakeContext,Cake.Paket.Addin.Restore.PaketRestoreSettings)">
+            <summary>
+            Runs paket restore for the given settings.
+            </summary>
+            <param name="context">The context.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.PaketAliases.PaketRestore(Cake.Core.ICakeContext)">
+            <summary>
+            Runs paket restore.
+            </summary>
+            <param name="context">The context.</param>
+        </member>
+        <member name="T:Cake.Paket.Addin.Pack.PaketPacker">
+            <summary>
+            The paket packer.
+            </summary>
+        </member>
+        <member name="M:Cake.Paket.Addin.Pack.PaketPacker.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.Tooling.IToolLocator,Cake.Core.IO.IProcessRunner,Cake.Paket.Addin.Tooling.IPaketToolResolver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Paket.Addin.Pack.PaketPacker"/> class.
+            </summary>
+            <param name="fileSystem">The file system.</param>
+            <param name="environment">The enviornment.</param>
+            <param name="toolLocator">The tool locator.</param>
+            <param name="processRunner">The process runner.</param>
+            <param name="paketToolResolver">The paket tool resolver.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.Pack.PaketPacker.Pack(Cake.Core.IO.DirectoryPath,Cake.Paket.Addin.Pack.PaketPackSettings)">
+            <summary>
+            Creates NuGet package(s) in the output directory for the given settings.
+            </summary>
+            <param name="output">The output directory.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="T:Cake.Paket.Addin.Pack.PaketPackSettings">
+            <summary>
+            Contains settings used by <see cref="T:Cake.Paket.Addin.Pack.PaketPacker"/>. See <see
+            href="https://fsprojects.github.io/Paket/paket-pack.html">Paket Pack</see> for more details.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.BuildConfig">
+            <summary>
+            Gets or sets the buildconfig.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.BuildPlatform">
+            <summary>
+            Gets or sets the buildplatform.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.Exclude">
+            <summary>
+            Gets or sets the exclude.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.IncludeReferencedProjects">
+            <summary>
+            Gets or sets a value indicating whether to enable include-referenced-projects.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.LockDependencies">
+            <summary>
+            Gets or sets a value indicating whether to enable lock-dependencies.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.MinimumFromLockFile">
+            <summary>
+            Gets or sets a value indicating whether to enable minimum-from-lock-file.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.PinProjectReferences">
+            <summary>
+            Gets or sets a value indicating whether to enable pin-project-references.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.ProjectUrl">
+            <summary>
+            Gets or sets the project-url.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.ReleaseNotes">
+            <summary>
+            Gets or sets the releaseNotes.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.SpecificVersion">
+            <summary>
+            Gets or sets the specific-version.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.Symbols">
+            <summary>
+            Gets or sets a value indicating whether to enable symbols.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.TemplateFile">
+            <summary>
+            Gets or sets the templatefile.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Pack.PaketPackSettings.Version">
+            <summary>
+            Gets or sets the version.
+            </summary>
+        </member>
+        <member name="T:Cake.Paket.Addin.Push.PaketPusher">
+            <summary>
+            The paket pusher.
+            </summary>
+        </member>
+        <member name="M:Cake.Paket.Addin.Push.PaketPusher.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.Tooling.IToolLocator,Cake.Core.IO.IProcessRunner,Cake.Paket.Addin.Tooling.IPaketToolResolver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Paket.Addin.Push.PaketPusher"/> class.
+            </summary>
+            <param name="fileSystem">The file system.</param>
+            <param name="environment">The enviornment.</param>
+            <param name="tools">The tool locator.</param>
+            <param name="processRunner">The process runner.</param>
+            <param name="resolver">The paket tool resolver.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.Push.PaketPusher.Push(Cake.Core.IO.FilePath,Cake.Paket.Addin.Push.PaketPushSettings)">
+            <summary>
+            Pushes NuGet package defined by the file path for the given settings.
+            </summary>
+            <param name="filePath">The NuGet package file path.</param>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="T:Cake.Paket.Addin.Push.PaketPushSettings">
+            <summary>
+            Contains settings used by <see cref="T:Cake.Paket.Addin.Push.PaketPusher"/>. See <see
+            href="https://fsprojects.github.io/Paket/paket-push.html">Paket Push</see> for more details.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Push.PaketPushSettings.ApiKey">
+            <summary>
+            Gets or sets the apikey.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Push.PaketPushSettings.EndPoint">
+            <summary>
+            Gets or sets the endpoint.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Push.PaketPushSettings.Url">
+            <summary>
+            Gets or sets the url.
+            </summary>
+        </member>
+        <member name="T:Cake.Paket.Addin.Restore.PaketRestoreSettings">
+            <summary>
+            Contains settings used by <see cref="T:Cake.Paket.Addin.Restore.PaketRestorer"/>. See <see
+            href="https://fsprojects.github.io/Paket/paket-restore.html">Paket Restore</see> for more details.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Restore.PaketRestoreSettings.FailOnChecks">
+            <summary>
+            Gets or sets a value indicating whether to cause the restore to fail if any of the checks fail.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Restore.PaketRestoreSettings.Force">
+            <summary>
+            Gets or sets a value indicating whether to force the download of all packages.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Restore.PaketRestoreSettings.Group">
+            <summary>
+            Gets or sets a value to restore a single group.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Restore.PaketRestoreSettings.IgnoreChecks">
+            <summary>
+            Gets or sets a value indicating whether to skip the test if paket.dependencies and
+            paket.lock are in sync.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Restore.PaketRestoreSettings.OnlyReferenced">
+            <summary>
+            Gets or sets a value indicating whether to restore packages that are referenced in the
+            paket.references files, as opposed to all the packages in paket.dependencies.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Restore.PaketRestoreSettings.Project">
+            <summary>
+            Gets or sets a value to restore dependencies for a project.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Restore.PaketRestoreSettings.ReferencesFiles">
+            <summary>
+            Gets or sets value to restore all packages from the given paket.references files.
+            </summary>
+        </member>
+        <member name="P:Cake.Paket.Addin.Restore.PaketRestoreSettings.TouchAffectedRefs">
+            <summary>
+            Gets or sets a value indicating whether to touch project files referencing packages which
+            are being restored, to help incremental build tools detecting the change.
+            </summary>
+        </member>
+        <member name="T:Cake.Paket.Addin.Restore.PaketRestorer">
+            <summary>
+            The paket restorer.
+            </summary>
+        </member>
+        <member name="M:Cake.Paket.Addin.Restore.PaketRestorer.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.Tooling.IToolLocator,Cake.Core.IO.IProcessRunner,Cake.Paket.Addin.Tooling.IPaketToolResolver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Paket.Addin.Restore.PaketRestorer"/> class.
+            </summary>
+            <param name="fileSystem">The file system.</param>
+            <param name="environment">The enviornment.</param>
+            <param name="toolLocator">The tool locator.</param>
+            <param name="processRunner">The process runner.</param>
+            <param name="paketToolResolver">The paket tool resolver.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.Restore.PaketRestorer.Restore(Cake.Paket.Addin.Restore.PaketRestoreSettings)">
+            <summary>
+            Runs paket restore for the given settings.
+            </summary>
+            <param name="settings">The settings.</param>
+        </member>
+        <member name="T:Cake.Paket.Addin.Tooling.IPaketToolResolver">
+            <summary>
+            Represents a paket path resolver.
+            </summary>
+        </member>
+        <member name="M:Cake.Paket.Addin.Tooling.IPaketToolResolver.ResolvePath">
+            <summary>
+            Resolves the path to paket.exe.
+            </summary>
+            <returns>The path to paket.exe.</returns>
+        </member>
+        <member name="T:Cake.Paket.Addin.Tooling.PaketTool`1">
+            <summary>
+            Base class for all paket related tools.
+            </summary>
+            <typeparam name="TSettings">The settings type.</typeparam>
+        </member>
+        <member name="M:Cake.Paket.Addin.Tooling.PaketTool`1.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.IO.IProcessRunner,Cake.Core.Tooling.IToolLocator,Cake.Paket.Addin.Tooling.IPaketToolResolver)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Paket.Addin.Tooling.PaketTool`1"/> class.
+            </summary>
+            <param name="fileSystem">The file system.</param>
+            <param name="environment">The environment.</param>
+            <param name="processRunner">The process runner.</param>
+            <param name="tools">The tool locator.</param>
+            <param name="resolver">The paket tool resolver.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.Tooling.PaketTool`1.GetToolName">
+            <summary>
+            Gets the name of the tool.
+            </summary>
+            <returns>The name of the tool.</returns>
+        </member>
+        <member name="M:Cake.Paket.Addin.Tooling.PaketTool`1.GetToolExecutableNames">
+            <summary>
+            Gets the possible names of the tool executable.
+            </summary>
+            <returns>The tool executable name.</returns>
+        </member>
+        <member name="M:Cake.Paket.Addin.Tooling.PaketTool`1.GetAlternativeToolPaths(`0)">
+            <summary>
+            Gets alternative file paths which the tool may exist in.
+            </summary>
+            <param name="settings">The settings.</param>
+            <returns>The default tool path.</returns>
+        </member>
+        <member name="T:Cake.Paket.Addin.Tooling.PaketToolResolver">
+            <summary>
+            Contains paket path resolver functionality.
+            </summary>
+        </member>
+        <member name="M:Cake.Paket.Addin.Tooling.PaketToolResolver.#ctor(Cake.Core.IO.IFileSystem,Cake.Core.ICakeEnvironment,Cake.Core.Tooling.IToolLocator,Cake.Core.IO.IProcessRunner,Cake.Core.ICakeArguments,Cake.Core.Diagnostics.ICakeLog)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Cake.Paket.Addin.Tooling.PaketToolResolver" /> class.
+            </summary>
+            <param name="fileSystem">The file system.</param>
+            <param name="environment">The environment.</param>
+            <param name="tools">The tool locator.</param>
+            <param name="processRunner">The process runner.</param>
+            <param name="arguments">The arguments.</param>
+            <param name="log">The log.</param>
+        </member>
+        <member name="M:Cake.Paket.Addin.Tooling.PaketToolResolver.ResolvePath">
+            <summary>
+            Resolves the path to paket.exe.
+            </summary>
+            <returns>The path to paket.exe.</returns>
+        </member>
+    </members>
+</doc>

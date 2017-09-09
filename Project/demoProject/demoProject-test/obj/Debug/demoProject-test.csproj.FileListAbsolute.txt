@@ -1,0 +1,16 @@
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject-test\bin\Debug\demoProject-test.dll
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject-test\bin\Debug\demoProject-test.pdb
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject-test\bin\Debug\demoProject.exe
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject-test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject-test\bin\Debug\demoProject.pdb
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject-test\obj\Debug\demoProject-test.csprojResolveAssemblyReference.cache
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject-test\obj\Debug\demoProject-test.dll
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject-test\obj\Debug\demoProject-test.pdb
+D:\shared\project\demoProject\demoProject-test\bin\Debug\demoProject-test.dll
+D:\shared\project\demoProject\demoProject-test\bin\Debug\demoProject-test.pdb
+D:\shared\project\demoProject\demoProject-test\bin\Debug\demoProject.exe
+D:\shared\project\demoProject\demoProject-test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\shared\project\demoProject\demoProject-test\bin\Debug\demoProject.pdb
+D:\shared\project\demoProject\demoProject-test\obj\Debug\demoProject-test.csprojResolveAssemblyReference.cache
+D:\shared\project\demoProject\demoProject-test\obj\Debug\demoProject-test.dll
+D:\shared\project\demoProject\demoProject-test\obj\Debug\demoProject-test.pdb
