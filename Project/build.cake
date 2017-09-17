@@ -1,20 +1,12 @@
 #tool "nuget:?package=xunit.runner.console"
-#tool nuget:?package=Codecov
-#addin nuget:?package=Cake.Codecov
 
 
 
-var target = Argument("target", "Upload-Coverage");
+var target = Argument("target", "Unit-tests");
 
 Task("Default")
-	.IsDependentOn("Upload-Coverage");
-	
-Task("Upload-Coverage")
-	.IsDependentOn("Unit-tests")
-    .Does(() =>{
-    // Upload a coverage report.
-    Codecov("coverage.xml");
-});
+	.IsDependentOn("Unit-tests");
+
 
 Task("Artifacts")
 	.IsDependentOn("CopyFiles")
