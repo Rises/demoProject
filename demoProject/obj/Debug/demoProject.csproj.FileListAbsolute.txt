@@ -1,0 +1,17 @@
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject\bin\Debug\demoProject.exe.config
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject\bin\Debug\demoProject.exe
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject\bin\Debug\demoProject.pdb
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject\obj\Debug\demoProject.exe
+c:\users\paritoshlouhan\documents\visual studio 2015\Projects\demoProject\demoProject\obj\Debug\demoProject.pdb
+D:\shared\project\demoProject\demoProject\bin\Debug\demoProject.exe.config
+D:\shared\project\demoProject\demoProject\bin\Debug\demoProject.exe
+D:\shared\project\demoProject\demoProject\bin\Debug\demoProject.pdb
+D:\shared\project\demoProject\demoProject\obj\Debug\demoProject.csprojResolveAssemblyReference.cache
+D:\shared\project\demoProject\demoProject\obj\Debug\demoProject.exe
+D:\shared\project\demoProject\demoProject\obj\Debug\demoProject.pdb
+D:\Shared\demoProject\demoProject\bin\Debug\demoProject.exe.config
+D:\Shared\demoProject\demoProject\bin\Debug\demoProject.exe
+D:\Shared\demoProject\demoProject\bin\Debug\demoProject.pdb
+D:\Shared\demoProject\demoProject\obj\Debug\demoProject.csprojResolveAssemblyReference.cache
+D:\Shared\demoProject\demoProject\obj\Debug\demoProject.exe
+D:\Shared\demoProject\demoProject\obj\Debug\demoProject.pdb
