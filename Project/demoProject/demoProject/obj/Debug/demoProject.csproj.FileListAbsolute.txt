@@ -9,3 +9,9 @@ D:\shared\project\demoProject\demoProject\bin\Debug\demoProject.pdb
 D:\shared\project\demoProject\demoProject\obj\Debug\demoProject.csprojResolveAssemblyReference.cache
 D:\shared\project\demoProject\demoProject\obj\Debug\demoProject.exe
 D:\shared\project\demoProject\demoProject\obj\Debug\demoProject.pdb
+D:\Shared\demoProject\Project\demoProject\demoProject\bin\Debug\demoProject.exe.config
+D:\Shared\demoProject\Project\demoProject\demoProject\bin\Debug\demoProject.exe
+D:\Shared\demoProject\Project\demoProject\demoProject\bin\Debug\demoProject.pdb
+D:\Shared\demoProject\Project\demoProject\demoProject\obj\Debug\demoProject.csprojResolveAssemblyReference.cache
+D:\Shared\demoProject\Project\demoProject\demoProject\obj\Debug\demoProject.exe
+D:\Shared\demoProject\Project\demoProject\demoProject\obj\Debug\demoProject.pdb

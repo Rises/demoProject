@@ -10,7 +10,7 @@ Task("Default")
 	.IsDependentOn("Upload-Coverage");
 	
 Task("Upload-Coverage")
-	.IsDependentOn("Artifacts")
+	.IsDependentOn("Unit-tests")
     .Does(() =>{
     // Upload a coverage report.
     Codecov("coverage.xml");

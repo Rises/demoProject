@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="f89a5055-8a69-4582-942c-7cc372455fee" name="paritoshlouhan@PARITOSH376002 2017-09-09 21:33:55" runUser="NAGARRO\paritoshlouhan" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="3eae9094-e33d-461f-a6fe-c19ba0af52c0">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="paritoshlouhan_PARITOSH376002 2017-09-09 21_33_55" />
+    <Properties />
+  </TestSettings>
+  <Times creation="2017-09-09T21:33:55.1280570+05:30" queuing="2017-09-09T21:33:55.3758914+05:30" start="2017-09-09T21:33:55.4690682+05:30" finish="2017-09-09T21:33:55.5247542+05:30" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestAddIntegers" storage="d:\shared\demoproject\project\demoproject\demoproject-test\bin\debug\demoproject-test.dll" id="8542d9c2-5830-2a93-0cf7-7fc2ac0cb6b0">
+      <Execution timeOut="1800000" id="c5701e97-5fa3-48e6-94ed-3a649b83f251" />
+      <TestMethod codeBase="D:/Shared/demoProject/Project/demoProject/demoProject-test/bin/Debug/demoProject-test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="demoProject_test.AddTest, demoProject-test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestAddIntegers" />
+    </UnitTest>
+    <UnitTest name="TestSubtractIntegers" storage="d:\shared\demoproject\project\demoproject\demoproject-test\bin\debug\demoproject-test.dll" id="c27e89aa-15ec-d9c1-aa2b-3479b6143ad7">
+      <Execution timeOut="1800000" id="5af13fe4-0867-4c22-ae1f-74766b79ef42" />
+      <TestMethod codeBase="D:/Shared/demoProject/Project/demoProject/demoProject-test/bin/Debug/demoProject-test.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="demoProject_test.SubtractTest, demoProject-test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestSubtractIntegers" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="8542d9c2-5830-2a93-0cf7-7fc2ac0cb6b0" executionId="c5701e97-5fa3-48e6-94ed-3a649b83f251" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c27e89aa-15ec-d9c1-aa2b-3479b6143ad7" executionId="5af13fe4-0867-4c22-ae1f-74766b79ef42" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="c5701e97-5fa3-48e6-94ed-3a649b83f251" testId="8542d9c2-5830-2a93-0cf7-7fc2ac0cb6b0" testName="TestAddIntegers" computerName="PARITOSH376002" duration="00:00:00.0032446" startTime="2017-09-09T21:33:55.4794235+05:30" endTime="2017-09-09T21:33:55.4937033+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c5701e97-5fa3-48e6-94ed-3a649b83f251">
+    </UnitTestResult>
+    <UnitTestResult executionId="5af13fe4-0867-4c22-ae1f-74766b79ef42" testId="c27e89aa-15ec-d9c1-aa2b-3479b6143ad7" testName="TestSubtractIntegers" computerName="PARITOSH376002" duration="00:00:00.0004140" startTime="2017-09-09T21:33:55.4937033+05:30" endTime="2017-09-09T21:33:55.4947368+05:30" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5af13fe4-0867-4c22-ae1f-74766b79ef42">
+    </UnitTestResult>
+  </Results>
+</TestRun>
